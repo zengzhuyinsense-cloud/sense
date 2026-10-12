@@ -1,0 +1,129 @@
+{
+  "$schema_note": "Declarative IA for Kivantos. bootstrap.py upserts by slug. Content HTML lives under wordpress/content/<slug>.html when present.",
+  "site": {
+    "url": "https://kivantos.com",
+    "name": "Kivantos",
+    "theme_template": "page-kivantos.php",
+    "notes": "Live site uses custom theme kivantos-custom-* with page-kivantos.php; marketing pages store full HTML in post_content."
+  },
+  "settings": {
+    "title": "Kivantos",
+    "description": "",
+    "show_on_front": "page",
+    "page_on_front_slug": "home"
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home — KIVANTOS",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/home.html",
+      "role": "front"
+    },
+    {
+      "slug": "mint",
+      "title": "Mint — Product Detail",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/mint.html"
+    },
+    {
+      "slug": "about",
+      "title": "About KIVANTOS",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/about.html"
+    },
+    {
+      "slug": "how-to-use",
+      "title": "How to Use",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/how-to-use.html"
+    },
+    {
+      "slug": "wholesale",
+      "title": "Wholesale",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/wholesale.html"
+    },
+    {
+      "slug": "faq",
+      "title": "Frequently Asked Questions",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/faq.html"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact Us",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/contact.html"
+    },
+    {
+      "slug": "shipping",
+      "title": "Shipping & Delivery",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/shipping.html"
+    },
+    {
+      "slug": "returns",
+      "title": "Returns & Refunds",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/returns.html"
+    },
+    {
+      "slug": "privacy",
+      "title": "Privacy Policy",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/privacy.html"
+    },
+    {
+      "slug": "terms",
+      "title": "Terms & Conditions",
+      "template": "page-kivantos.php",
+      "status": "publish",
+      "content_file": "content/terms.html"
+    }
+  ],
+  "menus": [
+    {
+      "name": "Primary",
+      "slug": "primary",
+      "items": [
+        { "title": "Home", "page_slug": "home" },
+        { "title": "Mint", "page_slug": "mint" },
+        { "title": "How to Use", "page_slug": "how-to-use" },
+        { "title": "Wholesale", "page_slug": "wholesale" },
+        { "title": "FAQ", "page_slug": "faq" },
+        { "title": "About", "page_slug": "about" },
+        { "title": "Contact", "page_slug": "contact" }
+      ]
+    },
+    {
+      "name": "Footer Legal",
+      "slug": "footer-legal",
+      "items": [
+        { "title": "Shipping", "page_slug": "shipping" },
+        { "title": "Returns", "page_slug": "returns" },
+        { "title": "Privacy", "page_slug": "privacy" },
+        { "title": "Terms", "page_slug": "terms" }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "slug": "kivantos-lifestyle-bag",
+      "file": "media/kivantos-lifestyle-bag.webp",
+      "title": "Kivantos lifestyle bag",
+      "alt_text": "KIVANTOS lifestyle — bag"
+    }
+  ],
+  "commerce_note": "WooCommerce product CRUD needs auth (wc/v3). Public store API: /wc/store/v1/products. Keep shop/cart/checkout/my-account as Woo pages; do not overwrite via this spec."
+}
